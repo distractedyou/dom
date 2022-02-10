@@ -1,19 +1,95 @@
 <html>
   <head>
     <link rel="icon" type="image/x-icon" href="image0.jpg">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
-      p{color:green;font-family:"Titillium Web"}
-      h1{color:black;font-family:"Comforter"}
-      footer{color:pink;font-size;5;font-family:"Comforter"}
-    </style>
+<title>DomPage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgi {
+  background-image: url('/w3images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+} /* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+</style>
   </head>
-  <body>
-    <h1>Dominik Website</h1>
-    <p>Welcome to Dominik's Website, its a work in progress.</p>
-    <p><a href="https://youtube.com/c/Dominiz">Sub Now</a></p>
-    <p><a href="https://discord.gg/9u7SypK93k">Discord</a></p>
-    <footer> made by <a href="https://github.com/distractedyou">Distraction</a> and <a href="https://github.com/twerqulies">twerqulies</a>.</footer>
+<body>
+
+<div class="bgi w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Dominiz</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center"><a href="https://discord.gg/9u7SypK93k">Discord</a></p>
+    <p class="w3-large w3-center"><a href="https://youtube.com/c/Dominiz">YouTube</a></p>
+  </div>
+</div>
+  <script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+    <footer style="font-family:sans-serif;font-size:5> made by <div class="popup" onclick="myFunction()">Distraction<span class="popuptext" id="myPopup"><a href="https://reddit.com/u/distractedyou>Reddit</a>
+  <a>distraction#5726</span></div> and <a href="https://github.com/twerqulies">twerqulies</a>. <a style="font-size:2">Credit to W3.CSS for styles</a>.</footer>
   </body>
 </html>
